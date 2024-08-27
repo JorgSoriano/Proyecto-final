@@ -1,0 +1,24 @@
+<div class="contacto">
+
+    <div>
+        <p>Administrador</p>
+
+        <form action="/admin/login" method="post">
+
+            <div>
+                <input type="text" class="form-control" id="inputUser" placeholder="Usuario" name="usuario">
+
+            </div>
+            <div>
+                <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña" name="password">
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-info">Ingresar</button>
+            </div>
+        </form>
+        {{#if error}}
+        <p>Usuario y/o contraseña incorrectos</p>
+        {{/if}}
+    </div>
+</div>

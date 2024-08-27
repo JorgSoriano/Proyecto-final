@@ -1,0 +1,25 @@
+.servicios {
+    /*  background-color: #484545;*/
+    font-family: "Tajawal", sans-serif;
+    font-weight: 300px;
+    background-color: #92929c;
+}
+
+.contenedorservicios {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.contenedorservicios img {
+    width: 180px;
+}
+
+.contenedorservicios :hover {
+    color: white;
+}
+
+.imgservicio {
+    box-shadow: 6px 20px 10px white;
+}

@@ -1,0 +1,85 @@
+.fondocontacto {
+    background: rgb(58, 154, 160);
+    padding-bottom: 20px;
+}
+
+.contacto {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+.contenedorcontacto {
+    background: #b2b2b9;
+    width: 450px;
+    height: 400px;
+    border-radius: 5%;
+    align-items: center;
+    box-shadow: 0 0 86px white;
+    /* box-shadow: 6px 20px 10px white; */
+    padding-bottom: 15px;
+}
+
+.formulario p {
+    padding-left: 40px;
+    font-family: "Open Sans", sans-serif;
+    /* color: #726d6d; */
+    color: white;
+}
+
+.formulario p label {
+    min-width: 80px;
+    display: flex;
+    align-items: right;
+    padding-left: 40px;
+}
+
+.formulario p input,
+.formulario p textarea {
+    border-radius: 5px;
+    border: 1px solid #999;
+    font-size: 14px;
+    padding: 6px 10px;
+    width: 70%;
+}
+
+.formulario textarea {
+    resize: none;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+
+.formulario p:nth-child(4) {
+    align-items: start;
+    padding-left: 40px;
+}
+
+.formulario input[type="submit"] {
+    width: 70px;
+}
+
+.formulario input[type="submit"]:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.direccion ul li {
+    padding: 8px;
+}
+
+.imagenredes {
+    width: 30px;
+    padding: 3px;
+    border-radius: 35%;
+}
+
+.direccion {
+    color: white;
+}

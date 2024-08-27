@@ -1,0 +1,56 @@
+<h1>Sección - Administrador</h1>
+<div class="container" style="margin-top: 50px;">
+    {{!--fila 1 --}}
+    <div class="row">
+        <p class="text-end">Hola {{persona}} ! <a class="btn btn-info" href="/admin/login/logout">Cerrar sesion <i
+                    class="fas fa-sign-out-alt"></i></a></p>
+    </div>
+    {{!-- fin fila 1 --}}
+    {{!-- fila 2 --}}
+    <div class="row">
+        <div class="col-7">
+            <h3>Listado de Promociones</h3>
+        </div>
+        <div class="col-5 text-end">
+            <a class="btn btn-danger" href="/admin/promociones/agregar"><i class="fa fa-plus"
+                    aria-hidden="true"></i>Nuevo</a>
+        </div>
+    </div>
+    {{!-- fin fila 2 --}}
+    {{!-- fila 3 --}}
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr class="table-dark">
+                        <th scope="col">#</th>
+                        <th scope="col">Promoción</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="text-end">Inicio</th>
+                        <th scope="text-end">Fin</th>
+                        <th scope="text-end">Imagen</th>
+                        <th scope="text-end">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each promociones}}
+                    <tr>
+                        <th scope="row"> {{id}} </th>
+                        <td> {{promocion}} </td>
+                        <td> {{descripcion}} </td>
+                        <td> {{inicio}} </td>
+                        <td> {{fin}} </td>
+                        <td> {{{imagen}}} </td>
+                        <td class="text-end">
+                            <a href="/admin/promociones/modificar/{{id}}" title="Editar" class="btn btn-dark">Editar<i
+                                    class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <a href="/admin/promociones/eliminar/{{id}}" title="Eliminar"
+                                class="btn btn-dark">Eliminar<i class="fa fa-trash" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                    {{/each}}
+
+                </tbody>
+            </table>
+        </div>
+    </div>

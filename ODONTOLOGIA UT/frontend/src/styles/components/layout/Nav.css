@@ -1,0 +1,36 @@
+.contenedornav {
+    background-color: white;
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    /* display: flex;
+    justify-content: center; */
+}
+
+nav li {
+    display: inline-flex;
+    padding-left: 6px;
+}
+
+
+nav a {
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+
+nav a:hover {
+    color: white;
+    /* border: 3px solid #7d7878; */
+    background: #7d7878;
+    border-radius: 5px;
+}
+
+.activo {
+    color: #7d7878;
+}

@@ -1,0 +1,58 @@
+<h2>AGENDA</h2>
+<div class="container" style="margin-top: 50px;">
+    {{!--fila 1 --}}
+    <div class="row">
+        <p class="text-end">Hola {{persona}} ! <a class="btn btn-danger" href="/admin/login/logout">Cerrar sesion <i
+                    class="fas fa-sign-out-alt"></i></a></p>
+    </div>
+    {{!-- fin fila 1 --}}
+    {{!-- fila 2 --}}
+    <div class="row">
+        <div class="col-7">
+
+            <h3>Lista de Contactos</h3>
+        </div>
+
+        <div class="col-5 text-end">
+            <a class="btn btn-secondary" href="/admin/agenda/agregar"><i class="fa fa-plus"
+                    aria-hidden="true"></i>NuevoContacto</a>
+        </div>
+    </div>
+    {{!-- fin fila 2 --}}
+    {{!-- fila 3 --}}
+    <div class="row">
+        <div class="col">
+            <br>
+            <br>
+            <table class="table">
+                <thead>
+                    <tr class="table-dark">
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="text-end">Mail</th>
+                        <th scope="text-end">Telefono</th>
+                        <th scope="text-end">Mensaje</th>
+                        <th scope="text-end">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each agenda}}
+                    <tr>
+                        <th scope="row"> {{id}} </th>
+                        <td> {{nombre}} </td>
+                        <td> {{mail}} </td>
+                        <td> {{telefono}} </td>
+                        <td> {{mensaje}} </td>
+                        <td class="text-end">
+                            <a href="/admin/agenda/modificar/{{id}}" title="Editar" class="btn btn-dark"><i
+                                    class="fa fa-pencil" aria-hidden="true"></i>Editar</a>
+                            <a href="/admin/agenda/eliminar/{{id}}" title="Eliminar" class="btn btn-dark"><i
+                                    class="fa fa-trash" aria-hidden="true"></i>Eliminar</a>
+                        </td>
+                    </tr>
+                    {{/each}}
+
+                </tbody>
+            </table>
+        </div>
+    </div>

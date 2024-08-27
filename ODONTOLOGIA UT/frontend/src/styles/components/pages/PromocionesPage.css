@@ -1,0 +1,15 @@
+.imagenp {
+    width: 450px;
+    height: 200px;
+    border-radius: 30%;
+    border: solid 2px white;
+    /* box-shadow: 14px 18px 80px white; */
+    box-shadow: 30px -15px 85px 35px white;
+    /* box-shadow: 14px 18px 80px rgb(83, 83, 112); */
+}
+
+.holder {
+    padding: 2%;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+}

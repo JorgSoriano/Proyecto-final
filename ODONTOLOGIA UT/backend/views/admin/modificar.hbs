@@ -1,0 +1,47 @@
+<div class="container" style="margin:100px auto">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h4>Modificar la novedad ID={{promocion.id}} </h4>
+
+            <form action="/admin/promociones/modificar" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="id" value="{{promocion.id}}">
+                <div class="form-group">
+                    <label for="">Promoción</label>
+                    <input type="text" class="form-control" placeholder="Promoción" name="promocion"
+                        value="{{promocion.promocion}}">
+                </div>
+                <div class="form-group">
+                    <label for="">Descripción</label>
+                    <input class="form-control" placeholder="Descripción" name="descripcion"
+                        value="{{promocion.descripcion}}">
+                </div>
+                <div class="form-group">
+                    <label for="">Inicio</label>
+                    <input type="date" class="form-control" placeholder="Inicio" name="inicio"
+                        value="{{promocion.inicio}}">
+                </div>
+                <div class="form-group">
+                    <label for="">Fín</label>
+                    <input type="date" class="form-control" placeholder="Fin" name="fin" value="{{promocion.fin}}">
+                </div>
+                <div class="mb-3 row">
+                    <p>
+                        <label>Imagen: <input type="file" class="form-control" name="imagen" id="imagen" />
+                        </label>
+                    </p>
+                    <p>
+                        <label> <input type="checkbox" name="img_delete" id="img_delete" value="1">Eliminar imagen
+                            actual? </label>
+                        <input type="hidden" name="img_original" value="{{promocion.img_id}}">
+                    </p>
+                </div>
+                <button type="submit" class="btn btn-primary">Modificar</button>
+            </form>
+            {{#if error}}
+            <h5>
+                {{message}}
+            </h5>
+            {{/if}}
+        </div>
+    </div>
+</div>
